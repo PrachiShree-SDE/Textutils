@@ -27,10 +27,27 @@ export default function Navbar(props) {
         <button className="btn btn-primary" type="submit">Search</button>
       </form>  */}
 
-        <div className={`lightform-check form-switch text-${props.mode=== "light"? "dark" :"light"}`} style={{display:'flex', alignItems:'center'}}>
-          <input className="form-check-input mx-1" onClick={props.toggleMode} type="checkbox" role="switch" id="switchCheckDefault"/>
-          <label className="form-check-label" htmlFor="switchCheckDefault">Enable Darkmode</label>
+
+      <div className="d-flex">
+        <div className="bg-primary rounded mx-2" onClick={()=>{props.toggleMode('primary')}} style={{height: '30px', width: '30px',cursor:'pointer' }}>   
         </div>
+          <div className="bg-danger rounded mx-2" onClick={()=>{props.toggleMode('danger')}} style={{height: '30px', width: '30px',cursor:'pointer' }}>   
+        </div>
+          <div className="bg-success rounded mx-2" onClick={()=>{props.toggleMode('success')}} style={{height: '30px', width: '30px',cursor:'pointer' }}>   
+        </div>
+          <div className="bg-warning rounded mx-2" onClick={()=>{props.toggleMode('warning')}} style={{height: '30px', width: '30px',cursor:'pointer' }}>   
+        </div>
+         <div className="bg-light rounded mx-2" onClick={()=>{props.toggleMode('light')}} style={{height: '30px', width: '30px',cursor:'pointer',border:'1px solid red' }}>   
+        </div>
+         <div className="bg-dark rounded mx-2" onClick={()=>{props.toggleMode('dark')}} style={{height: '30px', width: '30px',cursor:'pointer', border:'1px solid red'}}>   
+        </div>
+      </div>
+
+
+        {/* <div className={`lightform-check form-switch text-${props.mode=== "light"? "dark" :"light"}`} style={{display:'flex', alignItems:'center'}}>
+          <input className="form-check-input mx-1"  onClick={()=>{props.toggleMode(null)}} type="checkbox" role="switch" id="switchCheckDefault"/>
+          <label className="form-check-label" htmlFor="switchCheckDefault">Toggle Mode</label>
+        </div> */}
 
     </div>
   </div>
